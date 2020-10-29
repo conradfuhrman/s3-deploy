@@ -1038,7 +1038,7 @@ async function run() {
     const deleteRemoved = core.getInput('delete-removed') || false;
     const private = core.getInput('private') || false;
 
-    await deploy({ folder, bucket, bucketRegion, distId, invalidation, deleteRemoved });
+    await deploy({ folder, bucket, bucketRegion, distId, invalidation, deleteRemoved, private });
   } catch (error) {
     core.setFailed(error.message);
   }
